@@ -35,16 +35,29 @@ Alter Table Employees
 Drop Constraint CK_Employees_Bonus
 Go
 
+--NoCheck Constraint
 Alter Table Employees
 NoCheck Constraint CK_Employees_Bonus
 Go
 
 Insert Employees
-(FirstName,LastName,Phone,Salary,Bonus,Sex)
+(FirstName,LastName,Phone,Salary,Sex)
 Values
-('David','Rikardo','(065)-58-23-96',700,300,'male')
+('David','Rikardo','(065)-58-23-96',700,'male')
 Go
 
+--include Constraint
 Alter table Employees
 Check Constraint CK_Employees_Bonus
+Go
+
+--add new Constraint for Bonus
+Alter Table Employees
+Add Constraint DF_Employees_Bonus
+Default 0 For Bonus
+Go
+
+--Remove Constraint DF_Employees_Bonus
+Alter Table Employees
+Drop Constraint DF_Employees_Bonus
 Go
