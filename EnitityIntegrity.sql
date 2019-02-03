@@ -67,3 +67,6 @@ Go
 Insert Employees Values 
 ('Pol','Tyson','(025)-85-20-58')
 Go
+
+Alter table Employees
+Drop Constraint UQ_Employees_FName_LName 
