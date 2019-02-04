@@ -1,5 +1,6 @@
 
 --Referential Integrity
+Use Generals
 
 If OBJECT_ID('Employees') Is Not Null
    Drop table Employees
@@ -89,6 +90,8 @@ Go
 
 --Many to Many
 
+
+
 Create Table OrderProducts
 (
  OrderId INT Not Null,
@@ -97,4 +100,17 @@ Create Table OrderProducts
  FOREIGN KEY(OrderId) REFERENCES Orders(id),
  FOREIGN KEY(ProductId) REFERENCES Products(Id)
 )
+
+Alter Table OrderProducts
+Nocheck Constraint FK__OrderProd__Order__778AC167
+
+Insert OrderProducts
+Values
+(1,1),(1,3),(2,3),(3,2)
+
+--Self Referencing
+
+Alter Table OrderProducts
+Add EmployeeId Int Foreign Key References Employees(id)
+Go
 
