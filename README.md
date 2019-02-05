@@ -4,5 +4,5 @@
 <br/>
 <hr>
 
-<p align="Left"><img src="/suren-vanyan/Transact-SQL/blob/master/digram.png?raw=true" alt="digram.png">
+<p ><img src="/suren-vanyan/Transact-SQL/blob/master/digram.png?raw=true" alt="digram.png">
 </p>
