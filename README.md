@@ -4,6 +4,7 @@
 <br/>
 <hr>
 
-# Transact-SQL  <img src="/suren-vanyan/Transact-SQL/blob/master/digram.png?raw=true"   width="150px" height="150px" /> 
+# **_Structured Query Language(SQL) as we all know is the database language by the use of which we can perform certain operations on the existing database and also we can use this language to create a database. SQL uses certain commands.These SQL commands are mainly categorized into four categories as discussed below:._** ![digram](https://user-images.githubusercontent.com/38188753/52258132-5c4cfc00-2937-11e9-9af9-869f543edebe.png)
+
 
 
