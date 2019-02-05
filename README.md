@@ -4,8 +4,6 @@
 <br/>
 <hr>
 
-# Transact-SQL  <img src="/suren-vanyan/Transact-SQL/blob/master/digram.png?raw=true" align="right" width="150px" height="150px" /> 
+# Transact-SQL  <img src="/suren-vanyan/Transact-SQL/blob/master/digram.png?raw=true" alt="digram.png"  width="150px" height="150px" /> 
 
 
-<img src="/suren-vanyan/Transact-SQL/blob/master/digram.png?raw=true" alt="digram.png">
-</p>
