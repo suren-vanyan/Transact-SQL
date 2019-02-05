@@ -65,11 +65,21 @@ DROP DF_MixedMartialArtist_Nick
 	TotalFight INT ,
 	Wins TINYINT,
 	Losses TINYINT,
+	
  )
-
+ --ONE TO ONE
  ALTER TABLE MixedMartialArtsRecord
- ADD ArtistId INT UNIQUE 
+ ADD ArtistId INT UNIQUE FOREIGN KEY REFERENCES  MixedMartialArtist(Id)
 
+ INSERT MixedMartialArtsRecord
+ VALUES
+  (27,27,0,1),
+  (27,24,3,2),
+  (23,19,3,3),
+  (25,21,4,4)
+-----------------------------------------------
+ IF OBJECT_ID('UFCChampions') IS NOT NULL
+ DROP TABLE UFCChampions
 
  CREATE TABLE UFCChampions
  (
@@ -79,4 +89,13 @@ DROP DF_MixedMartialArtist_Nick
 	ArtistId INT UNIQUE FOREIGN KEY REFERENCES  MixedMartialArtist(Id)
  )
 
+ ALTER TABLE UFCChampions
+ ADD CONSTRAINT PK_MMArtist_ChampionID PRIMARY KEY(ChampionID)
+
+ 
+ INSERT INTO UFCChampions(FirstName,LastName,ArtistId)
+ SELECT FirstName,LastName,Id FROM MixedMartialArtist
+
+
+ 
 
